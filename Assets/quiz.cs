@@ -16,8 +16,17 @@ public class quiz : MonoBehaviour
     [SerializeField] Sprite correctAnswerSprite;
     void Start()
     {
+        GetNextQuestion();
+    }
+
+    void GetNextQuestion() {
+        SetButtonState(true);
+        SetDefaultButtonSprites();
+        displayQuestion();
+    }
+    public void displayQuestion()
+    {
         questionText.text = question.GetQuestion();
-        
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -26,21 +35,38 @@ public class quiz : MonoBehaviour
         }
     }
 
+    void SetButtonState(bool state)
+    {
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            Button button = answerButtons[i].GetComponent<Button>();
+            button.interactable = state;
+        }
+    }
     public void OnAnswerSelected(int x)
     {
         Image buttonImage;
-        
+
         if (x == question.GetCorrectAnswer())
         {
             questionText.text = "based";
             buttonImage = answerButtons[x].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
-        } else {
+        }
+        else
+        {
             correctAnswerIndex = question.GetCorrectAnswer();
             questionText.text = $"wrong. stupid. it was {question.GetAnswer(correctAnswerIndex)}";
             answerButtons[correctAnswerIndex].GetComponent<Image>().sprite = correctAnswerSprite; // epic line of code
         }
 
+        SetButtonState(false);
+    }
 
+    void SetDefaultButtonSprites() {
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            answerButtons[i].GetComponent<Image>().sprite = defaultAnswerSprite;
+        }
     }
 }
