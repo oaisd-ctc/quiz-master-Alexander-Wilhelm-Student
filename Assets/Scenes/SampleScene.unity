@@ -335,8 +335,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
-  m_sharedMaterial: {fileID: -8757628245622842574, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
+  m_sharedMaterial: {fileID: 2218832197476455556, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -595,7 +595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 235072268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290338135}
+        m_TargetAssemblyTypeName: quiz, Assembly-CSharp
+        m_MethodName: OnAnswerSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &235072268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +637,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &235072269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -694,8 +706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
-  m_sharedMaterial: {fileID: -8757628245622842574, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
+  m_sharedMaterial: {fileID: 2218832197476455556, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -729,7 +741,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -781,6 +793,7 @@ GameObject:
   - component: {fileID: 290338134}
   - component: {fileID: 290338133}
   - component: {fileID: 290338132}
+  - component: {fileID: 290338135}
   m_Layer: 0
   m_Name: GAMING REAL
   m_TagString: Untagged
@@ -872,6 +885,27 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 16129
   m_TargetDisplay: 0
+--- !u!114 &290338135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290338130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f21c98d12ebb314fb34126d5c68da4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: {fileID: 11400000, guid: 36f9965d73c521f4cabae7e7127fdf14, type: 2}
+  questionText: {fileID: 2115964511}
+  answerButtons:
+  - {fileID: 1334045308}
+  - {fileID: 299099050}
+  - {fileID: 1343284259}
+  - {fileID: 235072265}
+  defaultAnswerSprite: {fileID: 21300000, guid: 5ebc54fddbb62c340819103179624e7e, type: 3}
+  correctAnswerSprite: {fileID: 21300000, guid: 6a54703f3a9d22c40aa2420cc3ebee60, type: 3}
 --- !u!1 &299099050
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +989,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 299099053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290338135}
+        m_TargetAssemblyTypeName: quiz, Assembly-CSharp
+        m_MethodName: OnAnswerSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &299099053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,7 +1031,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &299099054
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1758,8 +1804,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
-  m_sharedMaterial: {fileID: -8757628245622842574, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
+  m_sharedMaterial: {fileID: 2218832197476455556, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1793,7 +1839,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1916,7 +1962,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1334045311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290338135}
+        m_TargetAssemblyTypeName: quiz, Assembly-CSharp
+        m_MethodName: OnAnswerSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1334045311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,7 +2004,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1334045312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2038,7 +2096,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343284262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290338135}
+        m_TargetAssemblyTypeName: quiz, Assembly-CSharp
+        m_MethodName: OnAnswerSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343284262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,7 +2138,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1343284263
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2137,8 +2207,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
-  m_sharedMaterial: {fileID: -8757628245622842574, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
+  m_sharedMaterial: {fileID: 2218832197476455556, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2172,7 +2242,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2574,8 +2644,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: you guys ever play among us
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
-  m_sharedMaterial: {fileID: -8757628245622842574, guid: 94239cca30c43654bbdc2798d312b54a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
+  m_sharedMaterial: {fileID: 2218832197476455556, guid: ab7e4a1e37f658748be05489fc848509, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
