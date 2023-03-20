@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: what is bicyclomycin
   Answers:
-  - antibiotic
   - low explosive
+  - antibiotic
   - polymer
   - carcinogen
-  CorrectAnswer: 0
+  CorrectAnswer: 1

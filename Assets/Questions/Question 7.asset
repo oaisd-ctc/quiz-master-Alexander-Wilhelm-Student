@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: which of these words is not real
   Answers:
-  - artimisolate
-  - abarticulation
   - acromphalus
+  - abarticulation
+  - artimisolate
   - arytenoepiglottic
-  CorrectAnswer: 0
+  CorrectAnswer: 2

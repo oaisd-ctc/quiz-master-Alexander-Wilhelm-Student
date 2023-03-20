@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: who is that mr beast guy anyway
   Answers:
-  - jimmy donaldson
+  - steve minecraft
   - jeff bezos 2
-  - steve burginart
-  - timmy
-  CorrectAnswer: 0
+  - jimmy donaldson
+  - your mom
+  CorrectAnswer: 2
